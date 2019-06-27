@@ -63,14 +63,14 @@ if(isset($_POST['login'])){
 ?>
 <body class="login-page" style="background-image: url('images/background-login.jpg');background-repeat: no-repeat;background-attachment: fixed;background-position: top; ">
     <div class="login-box" style="background:white;opacity:50;">
-        <div class="logo" align="center">
-            <img src="images/pkt_logo.png" width="340px"/ style="display:none">
-			<h3><?php echo $page_title; ?></h3>
+        <div class="logo" align="center" style="margin-bottom: 5px;">
+            <img src="images/logo_precipalm.png" width="240px"/>
+			<h3 style="display: none"><?php echo $page_title; ?></h3>
         </div>
         <div class="card">
             <div class="body">
                 <form action="" method="POST">
-                    <div class="msg">Masuk untuk memulai sesi</div>
+                    <div class="msg" style="display: none;">Masuk untuk memulai sesi</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
@@ -89,18 +89,20 @@ if(isset($_POST['login'])){
                     </div>
                     <div class="row">
                         <div class="col-xs-8 p-t-5">
-                            <input type="checkbox" name="setcookie" id="setcookie" class="filled-in chk-col-pink" checked>
-                            <label for="setcookie">Ingat saya</label>
+                            <div style="display: none;">
+                                <input type="checkbox" name="setcookie" id="setcookie" class="filled-in chk-col-pink" checked>
+                                <label for="setcookie">Ingat saya</label>
+                            </div>
                         </div>
                         <div class="col-xs-4">
                             <input type="submit" class="btn bg-pink btn-block btn-flat" name="login" value="Masuk"></input>
                         </div>
                     </div>
-                    <div class="row m-t-15 m-b--20">
+                    <!-- <div class="row m-t-15 m-b--20">
                         <div class="col-xs-6 align-right">
-                            <!--<a href="forgot-password.html">Lupa password?</a>-->
+                            <a href="forgot-password.html">Lupa password?</a>
                         </div>
-                    </div>
+                    </div> -->
                 </form>
             </div>
         </div>
