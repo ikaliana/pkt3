@@ -21,21 +21,21 @@
     <script src="plugins/jquery-countto/jquery.countTo.js"></script>
 
     <!-- Morris Plugin Js -->
-    <script src="plugins/raphael/raphael.min.js"></script>
-    <script src="plugins/morrisjs/morris.js"></script>
+    <!-- <script src="plugins/raphael/raphael.min.js"></script>
+    <script src="plugins/morrisjs/morris.js"></script> -->
 
     <!-- ChartJs -->
-    <script src="plugins/chartjs/Chart.bundle.js"></script>
+    <!-- <script src="plugins/chartjs/Chart.bundle.js"></script> -->
 
     <!-- Flot Charts Plugin Js -->
-    <script src="plugins/flot-charts/jquery.flot.js"></script>
+    <!-- <script src="plugins/flot-charts/jquery.flot.js"></script>
     <script src="plugins/flot-charts/jquery.flot.resize.js"></script>
     <script src="plugins/flot-charts/jquery.flot.pie.js"></script>
     <script src="plugins/flot-charts/jquery.flot.categories.js"></script>
-    <script src="plugins/flot-charts/jquery.flot.time.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.time.js"></script> -->
 
     <!-- Sparkline Chart Plugin Js -->
-    <script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
+    <!-- <script src="plugins/jquery-sparkline/jquery.sparkline.js"></script> -->
 	
 	<!-- datepicker -->
 	<script src="plugins/datepicker/js/datepicker.js"></script>
@@ -68,12 +68,12 @@
 	
     <!-- Custom Js -->
     <script src="js/admin.js"></script>
-    <script src="js/pages/index.js"></script>
-	<script src="js/pages/forms/advanced-form-elements.js"></script>
+    <!-- <script src="js/pages/index.js"></script> -->
+	<!-- <script src="js/pages/forms/advanced-form-elements.js"></script> -->
     <script src="js/pages/ui/dialogs.js"></script>
 
     <!-- Demo Js -->
-    <script src="js/demo.js"></script>
+    <!-- <script src="js/demo.js"></script> -->
 </body>
 
 </html>
