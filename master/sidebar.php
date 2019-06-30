@@ -110,11 +110,11 @@
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2017 <a href="javascript:void(0);"><?php echo $copyright; ?></a>
+                    &copy; <a href="javascript:void(0);"><?php echo $copyright; ?></a>
                 </div>
-                <div class="version">
+                <!-- <div class="version">
                     <b>Versi: </b> 1.0
-                </div>
+                </div> -->
             </div>
             <!-- #Footer -->
         </aside>
