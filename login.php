@@ -95,7 +95,7 @@ if(isset($_POST['login'])){
                             </div>
                         </div>
                         <div class="col-xs-4">
-                            <input type="submit" class="btn bg-pink btn-block btn-flat" name="login" value="Masuk"></input>
+                            <input type="submit" class="btn bg-primary btn-block btn-flat" name="login" value="Masuk"></input>
                         </div>
                     </div>
                     <!-- <div class="row m-t-15 m-b--20">
