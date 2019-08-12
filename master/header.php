@@ -79,11 +79,12 @@ include './user_access.php';
     <style type="text/css">
         .map-label { color: #000; /*font-size: small;*/ }
         #mapid3 { background-color: #bcbcbc; }
+        .navbar-brand img { margin-top: -24px; display: inline-block; margin-right: 12px; }
     </style>
 	
 </head>
 
-<body class="theme-green" style="background-image: url('images/background.jpg');background-repeat: no-repeat;background-attachment: fixed;background-position: center; ">
+<body class="theme-light-green" style="background-image: url('images/background.jpg');background-repeat: no-repeat;background-attachment: fixed;background-position: center; ">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
@@ -116,17 +117,20 @@ include './user_access.php';
     </div>
     <!-- #END# Search Bar -->
     <!-- Top Bar -->
-    <nav class="navbar">
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <!-- <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a> -->
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html"><?php echo $page_title; ?></a>
+                <a class="navbar-brand font-20 font-bold" href="index.php">
+                    <img src="images/logo_precipalm.png" style="height: 70px;"/>
+                    <span class="hidden-xs"><?php echo $page_title; ?></span>
+                </a>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
+            <!-- <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-					<li><img src="images/pkt_logo.png" height="40px" style="margin-top:20px;display:none"/></li>
+                    <li></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </nav>
