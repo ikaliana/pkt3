@@ -8,19 +8,33 @@ def ClassificationValue(val,unsur):
 		elif val <= 2.1 and val > 1.9: retval = 2 
 		elif val <= 1.9: retval = 1 
 	if unsur == "P":
-		if val > 0.17: retval = 6
-		elif val <= 0.17 and val > 0.15: retval = 5
-		elif val <= 0.15 and val > 0.13: retval = 4 
-		elif val <= 0.13 and val > 0.11: retval = 3 
-		elif val <= 0.11 and val > 0.09: retval = 2 
-		elif val <= 0.09: retval = 1 
+		if val > 0.195: retval = 6
+		elif val <= 0.195 and val > 0.18: retval = 5
+		elif val <= 0.18 and val > 0.165: retval = 4 
+		elif val <= 0.165 and val > 0.15: retval = 3 
+		elif val <= 0.15 and val > 0.135: retval = 2 
+		elif val <= 0.135: retval = 1 
 	if unsur == "K":
-		if val > 1.2: retval = 6
-		elif val <= 1.2 and val > 1.0: retval = 5
-		elif val <= 1.0 and val > 0.8: retval = 4 
-		elif val <= 0.8 and val > 0.6: retval = 3 
-		elif val <= 0.6 and val > 0.4: retval = 2 
-		elif val <= 0.4: retval = 1 
+		if val > 1.45: retval = 6
+		elif val <= 1.45 and val > 1.3: retval = 5
+		elif val <= 1.3 and val > 1.15: retval = 4 
+		elif val <= 1.15 and val > 1: retval = 3 
+		elif val <= 1 and val > 0.85: retval = 2 
+		elif val <= 0.85: retval = 1 
+	# if unsur == "P":
+	# 	if val > 0.17: retval = 6
+	# 	elif val <= 0.17 and val > 0.15: retval = 5
+	# 	elif val <= 0.15 and val > 0.13: retval = 4 
+	# 	elif val <= 0.13 and val > 0.11: retval = 3 
+	# 	elif val <= 0.11 and val > 0.09: retval = 2 
+	# 	elif val <= 0.09: retval = 1 
+	# if unsur == "K":
+	# 	if val > 1.2: retval = 6
+	# 	elif val <= 1.2 and val > 1.0: retval = 5
+	# 	elif val <= 1.0 and val > 0.8: retval = 4 
+	# 	elif val <= 0.8 and val > 0.6: retval = 3 
+	# 	elif val <= 0.6 and val > 0.4: retval = 2 
+	# 	elif val <= 0.4: retval = 1 
 	if unsur == "Mg":
 		if val > 0.26: retval = 6
 		elif val <= 0.26 and val > 0.24: retval = 5
