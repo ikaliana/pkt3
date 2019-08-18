@@ -525,17 +525,17 @@
 							</ul>							
 							<ul class="list-group" id="legend_P" style="border: 1px solid #ddd;margin-bottom:0;display:none;">
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#FF0000;margin-right:25px;">&nbsp;</span> &lt;= 0.09 %</li>
+									<span style="width:25px;display:inline-block;background:#FF0000;margin-right:25px;">&nbsp;</span> &lt;= 0.135 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#FCFF2D;margin-right:25px;">&nbsp;</span> 0.09 % - 0.11 %</li>
+									<span style="width:25px;display:inline-block;background:#FCFF2D;margin-right:25px;">&nbsp;</span> 0.135 % - 0.15 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#6AFE48;margin-right:25px;">&nbsp;</span> 0.11 % - 0.13 %</li>
+									<span style="width:25px;display:inline-block;background:#6AFE48;margin-right:25px;">&nbsp;</span> 0.15 % - 0.165 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#02C630;margin-right:25px;">&nbsp;</span> 0.13 % - 0.15 %</li>
+									<span style="width:25px;display:inline-block;background:#02C630;margin-right:25px;">&nbsp;</span> 0.165 % - 0.18 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#20E6DC;margin-right:25px;">&nbsp;</span> 0.15 % - 0.17 %</li>
+									<span style="width:25px;display:inline-block;background:#20E6DC;margin-right:25px;">&nbsp;</span> 0.18 % - 0.195 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#123A8F;margin-right:25px;">&nbsp;</span> &gt; 0.17 %</li>
+									<span style="width:25px;display:inline-block;background:#123A8F;margin-right:25px;">&nbsp;</span> &gt; 0.195 %</li>
 							</ul>							
 							<ul class="list-group" id="legend_P-Tanah" style="border: 1px solid #ddd;margin-bottom:0;display:none;">
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
@@ -553,17 +553,17 @@
 							</ul>							
 							<ul class="list-group" id="legend_K" style="border: 1px solid #ddd;margin-bottom:0;display:none;">
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#FF0000;margin-right:25px;">&nbsp;</span> &lt;= 0.4 %</li>
+									<span style="width:25px;display:inline-block;background:#FF0000;margin-right:25px;">&nbsp;</span> &lt;= 0.85 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#FCFF2D;margin-right:25px;">&nbsp;</span> 0.4 % - 0.6 %</li>
+									<span style="width:25px;display:inline-block;background:#FCFF2D;margin-right:25px;">&nbsp;</span> 0.85 % - 1.0 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#6AFE48;margin-right:25px;">&nbsp;</span> 0.6 % - 0.8 %</li>
+									<span style="width:25px;display:inline-block;background:#6AFE48;margin-right:25px;">&nbsp;</span> 1.0 % - 1.15 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#02C630;margin-right:25px;">&nbsp;</span> 0.8 % - 1.0 %</li>
+									<span style="width:25px;display:inline-block;background:#02C630;margin-right:25px;">&nbsp;</span> 1.15 % - 1.3 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#20E6DC;margin-right:25px;">&nbsp;</span> 1.0 % - 1.2 %</li>
+									<span style="width:25px;display:inline-block;background:#20E6DC;margin-right:25px;">&nbsp;</span> 1.3 % - 1.45 %</li>
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
-									<span style="width:25px;display:inline-block;background:#123A8F;margin-right:25px;">&nbsp;</span> &gt; 1.2 %</li>
+									<span style="width:25px;display:inline-block;background:#123A8F;margin-right:25px;">&nbsp;</span> &gt; 1.45 %</li>
 							</ul>							
 							<ul class="list-group" id="legend_K-Tanah" style="border: 1px solid #ddd;margin-bottom:0;display:none;">
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
