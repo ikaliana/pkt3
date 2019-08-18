@@ -35,10 +35,11 @@ pixel_size = 10.0
 class_color = [0x00000000,0xFF0000FF,0xFF2DFFFC,0xFF48FE6A,0xFF30C602,0xFFDCE620,0xFF8F3A12]
 class_color_2 = [0x00000000,0xFF1C19D7,0xFF5390F6,0xFF9ADFFF,0xFF9EF0DC,0xFF62CC8A,0xFF41961A]
 # data_color = c.Algae_20.hex_colors
-data_color = c.Ice_15.hex_colors[::-1]
+# data_color = c.Ice_15.hex_colors[::-1]
 # data_color = c1.purple_16.hex_colors[::-1]	#additional '[::-1]' --> reverse the array
 # data_color = c2.Viridis_20.hex_colors[::-1]
 # data_color = c3.Blues_9.hex_colors
+data_color = c.Ice_6.hex_colors[::-1]
 data_color_size = np.size(data_color)
 
 critical_value_daun = { "N" : 2.5, "P" : 0.15, "K" : 1.00, "Mg" : 0.24 }
