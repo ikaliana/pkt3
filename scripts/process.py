@@ -173,8 +173,8 @@ warp_opts = gdal.WarpOptions(
 )
 gdal.Warp(clipped_file, sentinel_file, options=warp_opts)
 #cari opsi lain buat clip raster (lihat di sample GDAL di internet). bbrp titik hasilnya meleset
-# exit()
 print("Clip raster done")
+# exit()
 
 ## ========== CREATE GRID FILE  ====================
 
@@ -297,7 +297,7 @@ for unsur in kelompok_unsur:
 				luas_area += 1
 				tahun_tanam = tahun_tanam_data[i,j]  #ambil data ini dari raster/vector
 				# tahun_now = int(tanggal_citra.strftime("%Y"))  #harusnya ngambil dari tanggal sensing citra sentinel
-				tahun_now = int(tanggal_pemupukan.strftime("%Y"))  #harusnya ngambil dari tanggal sensing citra sentinel
+				tahun_now = int(tanggal_pemupukan.strftime("%Y"))  #ambil dari tanggal pemupukan (manual input)
 				umur_tanaman = tahun_now - tahun_tanam
 
 				# --- calculate nutrient using model --- #
@@ -472,7 +472,6 @@ for nama_pupuk in komposisi_pupuk:
 
 		divider = range_max / (data_color_size * 1.0) #20.0
 		range_value = np.arange(0,range_max+(divider/2.0),divider)
-		# print range_value
 
 		raster_data = np.empty((cols, rows),numpy.uint32)
 		raster_data.shape=rows, cols
@@ -483,7 +482,8 @@ for nama_pupuk in komposisi_pupuk:
 				if data_dosis[i,j] != null_value:
 					dosis_val = data_dosis[i,j]
 					idx = range_value.searchsorted(dosis_val,'right')-1
-					if idx > 14: idx = 14
+					# if idx > 14: idx = 14
+					if idx > (data_color_size-1): idx = (data_color_size-1)
 					if idx < 0: idx = 0
 					color_val = data_color[idx]
 					color_val_new = '0xFF' + color_val[5:7] + color_val[3:5] + color_val[1:3] 
@@ -494,6 +494,13 @@ for nama_pupuk in komposisi_pupuk:
 		nama_raster = work_folder + "Citra_Klasifikasi_Pupuk_" + nama_pupuk + ".png"
 		save.SaveDataToPNG(nama_raster,raster_data.tostring(),cols,rows)
 
+		dosis_pupuk_meta = {}
+		dosis_pupuk_meta["max"] = str(dosis_max)
+		dosis_pupuk_meta["range"] = ",".join(range_value.astype(str));
+		dosis_pupuk_meta["color"] = ",".join(data_color);
+		save.SaveJsonToFile(work_folder + "Data_Klasifikasi_Pupuk_" + nama_pupuk + ".geojson",dosis_pupuk_meta)
+		# print(dosis_pupuk_meta)
+
 
 		# --- Calculate Fertilizer ideal for each BLOK area based on unsur terpilih ---- #
 		json_file_name = work_folder + "Data_Blok_Pupuk_" + nama_pupuk + ".geojson"
@@ -502,6 +509,7 @@ for nama_pupuk in komposisi_pupuk:
 			for feature in json_data_all["features"]:
 				data = feature["properties"]
 				data_terpilih = data[unsur_terpilih + "_sum"]
+				if data_terpilih is None: data_terpilih = 0
 
 				N_sum = data["N_sum"] if data["N_count"] > 0 else 0
 				P_sum = data["P_sum"] if data["P_count"] > 0 else 0

@@ -889,37 +889,38 @@
 	   	$("#cbpupuk2").on('change', function() {
 	   		var pupuk = $("#cbpupuk2").val();
 
+	   		var data_json_img = imageUrl + "Data_Klasifikasi_Pupuk_" + pupuk + ".geojson";
 	   		var data_json = imageUrl + "Data_Grid_Pupuk_" + pupuk + ".geojson";
-	   		// var data_json = imageUrl + "Data_Grid_Pupuk_UREA_4326.geojson";
 	   		var data_img = imageUrl + "Citra_Klasifikasi_Pupuk_"  + pupuk + ".png";
 
-	   		$.getJSON(data_raster).done(function (d) {
+	   		$.getJSON(data_json_img).done(function (d) {
+		   		console.log(d);
+		   		$.getJSON(data_raster).done(function (d) {
 
-				//console.log(data_raster);
-				var imgBounds = [[d.y1_4326,d.x1_4326], [d.y2_4326,d.x2_4326]];
+					var imgBounds = [[d.y1_4326,d.x1_4326], [d.y2_4326,d.x2_4326]];
 
-				$.getJSON(data_json, function(data){
-			        map3.eachLayer(function (layer) { map3.removeLayer(layer); });
+					$.getJSON(data_json, function(data){
+				        map3.eachLayer(function (layer) { map3.removeLayer(layer); });
 
-			        var mapData = L.geoJson(data, { filter: filter, style: style, onEachFeature: OnEachFeature });
-			        var mapBound = mapData.getBounds();
-			        mapData.addTo(map3);
+				        var mapData = L.geoJson(data, { filter: filter, style: style, onEachFeature: OnEachFeature });
+				        var mapBound = mapData.getBounds();
+				        mapData.addTo(map3);
 
-			        var img = L.imageOverlay(data_img,imgBounds);
-			        img.addTo(map3);
+				        var img = L.imageOverlay(data_img,imgBounds);
+				        img.addTo(map3);
 
-			        map3.fitBounds(imgBounds);
-			        // map3.fitBounds(mapBound);
+				        map3.fitBounds(imgBounds);
 
-					mapTable.clear().draw();
-					table_data = [];
-					$.each(data.features, function (key, val) {
-						var sum = val.properties.sum;
-						if (sum != null) table_data.push(val.properties);
-			        });
+						mapTable.clear().draw();
+						table_data = [];
+						$.each(data.features, function (key, val) {
+							var sum = val.properties.sum;
+							if (sum != null) table_data.push(val.properties);
+				        });
 
-			        mapTable.rows.add(table_data).draw();
-			    });
+				        mapTable.rows.add(table_data).draw();
+				    });
+		   		});
 	   		});
 
 	   	});

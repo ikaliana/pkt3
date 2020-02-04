@@ -6,6 +6,7 @@ def db_config():
 	return { "host" : "localhost", "database": "pkt", "username": "postgres","password": "password" }
 
 def GetData(strquery,firstRowOnly):
+	conn = None
 	try:
 
 		retval = None
