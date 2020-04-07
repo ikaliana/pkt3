@@ -81,7 +81,35 @@ include './user_access.php';
         #mapid3 { background-color: #bcbcbc; }
         .navbar-brand img { margin-top: -24px; display: inline-block; margin-right: 12px; }
     </style>
-	
+
+<?php
+    $page = $_GET['p'];
+    if ($page=="hasil_content_detail") {
+?>	
+    <style type="text/css">
+        .dt-buttons { float: right !important; }
+        #tabel_rekomendasi_blok_wrapper .col-sm-6 { margin-bottom: 5px;  }
+        ul.up-menu { border-bottom-color: #fff }
+        ul.up-menu li a:hover { background-color: #ddd !important; }
+        .header-tab-menu { 
+            position: fixed;
+            top: 70px;
+            left: 315px;
+            z-index: 3;
+            background-color: #fff;
+            width: 100%;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd
+        }
+        .header-tab-menu ul li a { 
+            border: 1px solid #ccc !important; 
+            border-bottom-left-radius: 7px; 
+            border-bottom-right-radius: 7px;
+            background-color: #efefef;
+            color: #555 !important;
+        }
+    </style>
+<?php } ?>
 </head>
 
 <body class="theme-light-green" style="background-image: url('images/background.jpg');background-repeat: no-repeat;background-attachment: fixed;background-position: center; ">
