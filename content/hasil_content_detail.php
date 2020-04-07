@@ -26,163 +26,156 @@
 	}
 	
 ?>
+<script>
+	function ScrollContent(id) {
+		var el = $(id)[0];
+		var top = el.offsetTop-125;
+		$('html, body').animate({ scrollTop: top });
+	}
+</script>
 <section class="content">
+    <div class="header-tab-menu row">
+        <div class="col-xs-12">
+			<ul class="nav nav-tabs up-menu">
+                <li><a href="javascript:ScrollContent('#informasi_area')">Informasi Area</a></li>
+                <li><a href="javascript:ScrollContent('#rekomendasi_total')">Rekomendasi Total</a></li>
+                <li><a href="javascript:ScrollContent('#rekomendasi_hektar')">Rekomendasi Hektar</a></li>
+                <li><a href="javascript:ScrollContent('#rekomendasi_blok')">Rekomendasi Blok</a></li>
+                <li><a href="javascript:ScrollContent('#peta_nutrisi')">Peta Kandungan Unsur</a></li>
+                <li><a href="javascript:ScrollContent('#peta_dosis')">Peta Persentase Penambahan Dosis</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="container-fluid">
+        <p>&nbsp;</p>
         <div class="block-header">
             <h2>HASIL PERHITUNGAN</h2>
         </div>
-
-        <!-- Widgets -->
-        <div class="row clearfix">
-            
-        </div>
-        <!-- #END# Widgets -->
-        <!-- CPU Usage -->
-        <div class="row clearfix">
-            <div class="col-xs-12">
-                <div class="card" style="margin-bottom:10px;">
-                    <div class="header">
-                        <div class="row clearfix">
-                            <div class="col-xs-12">
-                                <h2>Informasi Area</h2>
-                            </div>
+    	<div class="tab-content">
+	        <div class="card" id="informasi_area">
+                <div class="header">
+                    <div class="row clearfix">
+                        <div class="col-sm-12 col-md-6">
+                            <h2>Informasi Area</h2>
                         </div>
                     </div>
-                    <div class="body">
-						<div class="row clearfix">
-							<div class="col-md-4" style="margin-bottom: 0">
-								<div class="media">
-									<div class="media-left">
-										<a href="#">
-											<img class="media-object" src="images/icon/map.png" alt="Area Perkebunan" width="48">
-										</a>
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Area Perkebunan</h4>
-										<h5 style="font-weight:normal"><?php echo $nama_area; ?></h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4" style="margin-bottom: 0">
-								<div class="media">
-									<div class="media-left">
-										<a href="#">
-											<img class="media-object" src="images/icon/satellite.png" alt="Citra Sentinel" width="48">
-										</a>
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Tanggal Citra Sentinel</h4>
-										<h5 style="font-weight:normal"><?php echo date('d F Y',strtotime($tanggal_citra)); ?></h5>
-										
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4" style="margin-bottom: 0">
-								<div class="media">
-									<div class="media-left">
-										<a href="#">
-											<img class="media-object" src="images/icon/area.png" alt="Citra Sentinel" width="48">
-										</a>
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Luas area</h4>
-										<h5 style="font-weight:normal"><?php echo $luas_area; ?> ha</h5>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row clearfix">
-							<div class="col-md-4" style="margin-bottom: 0">
-								<div class="media">
-									<div class="media-left">
-										<a href="#">
-											<img class="media-object" src="images/icon/tanggal.png" alt="Tanggal Pemupukan" width="48">
-										</a>
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Tanggal Pemupukan</h4>
-										<h5 style="font-weight:normal"><?php echo $tanggal_pemupukan; ?></h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4" style="margin-bottom: 0">
-								<div class="media">
-									<div class="media-left">
-										<a href="#">
-											<img class="media-object" src="images/icon/dosis.png" alt="Persentase dosis" width="48">
-										</a>
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Proporsi dosis</h4>
-										<h5 style="font-weight:normal"><?php echo $persentase_dosis; ?> %</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row clearfix" style="display:none">
-							<div class="col-md-4" style="margin-bottom: 0">
-								<div class="media">
-									<div class="media-left">
-										<a href="#">
-											<img class="media-object" src="images/icon/model.png" alt="Citra Sentinel" width="48">
-										</a>
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Model Perhitungan N</h4>
-										<h5 style="font-weight:normal">Jonggol N Daun Reloaded</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4" style="margin-bottom: 0">
-								<div class="media">
-									<div class="media-left">
-										<a href="#">
-											<img class="media-object" src="images/icon/model.png" alt="Citra Sentinel" width="48">
-										</a>
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Model Perhitungan P</h4>
-										<h5 style="font-weight:normal">Jonggol P Daun Reloaded</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4" style="margin-bottom: 0">
-								<div class="media">
-									<div class="media-left">
-										<a href="#">
-											<img class="media-object" src="images/icon/model.png" alt="Citra Sentinel" width="48">
-										</a>
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">Model Perhitungan K</h4>
-										<h5 style="font-weight:normal">Jonggol K Daun Reloaded</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row clearfix">
-            <div class="col-xs-12">
-				<ul class="nav nav-tabs">
-                    <li class="active"><a href="#rekomendasi_total" data-toggle="tab" aria-expanded="true">Rekomendasi Total</a>
-                    </li>
-                    <li class=""><a href="#rekomendasi_hektar" data-toggle="tab" aria-expanded="false">Rekomendasi Hektar</a>
-                    </li>
-                    <li class=""><a href="#rekomendasi_blok" data-toggle="tab" aria-expanded="false">Rekomendasi Blok</a>
-                    </li>
-                    <li class=""><a href="#peta_nutrisi" data-toggle="tab" aria-expanded="false">Peta Kandungan Unsur</a>
-                    </li>
-                    <li class=""><a href="#peta_dosis" data-toggle="tab" aria-expanded="false">Peta Persentase Penambahan Dosis</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    	<div class="tab-content">
-	        <div class="card tab-pane active" id="rekomendasi_total">
+                <div class="body">
+					<div class="row clearfix">
+						<div class="col-md-4" style="margin-bottom: 0">
+							<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/icon/map.png" alt="Area Perkebunan" width="48">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Area Perkebunan</h4>
+									<h5 style="font-weight:normal"><?php echo $nama_area; ?></h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4" style="margin-bottom: 0">
+							<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/icon/satellite.png" alt="Citra Sentinel" width="48">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Tanggal Citra Sentinel</h4>
+									<h5 style="font-weight:normal"><?php echo date('d F Y',strtotime($tanggal_citra)); ?></h5>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4" style="margin-bottom: 0">
+							<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/icon/area.png" alt="Citra Sentinel" width="48">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Luas area</h4>
+									<h5 style="font-weight:normal"><?php echo $luas_area; ?> ha</h5>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-4" style="margin-bottom: 0">
+							<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/icon/tanggal.png" alt="Tanggal Pemupukan" width="48">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Tanggal Pemupukan</h4>
+									<h5 style="font-weight:normal"><?php echo $tanggal_pemupukan; ?></h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4" style="margin-bottom: 0">
+							<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/icon/dosis.png" alt="Persentase dosis" width="48">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Proporsi dosis</h4>
+									<h5 style="font-weight:normal"><?php echo $persentase_dosis; ?> %</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row clearfix" style="display:none">
+						<div class="col-md-4" style="margin-bottom: 0">
+							<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/icon/model.png" alt="Citra Sentinel" width="48">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Model Perhitungan N</h4>
+									<h5 style="font-weight:normal">Jonggol N Daun Reloaded</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4" style="margin-bottom: 0">
+							<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/icon/model.png" alt="Citra Sentinel" width="48">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Model Perhitungan P</h4>
+									<h5 style="font-weight:normal">Jonggol P Daun Reloaded</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4" style="margin-bottom: 0">
+							<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/icon/model.png" alt="Citra Sentinel" width="48">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Model Perhitungan K</h4>
+									<h5 style="font-weight:normal">Jonggol K Daun Reloaded</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+	        </div>
+	        <div class="card" id="rekomendasi_total">
 	    		<div class="header">
 	                <div class="row clearfix">
 	                    <div class="col-sm-12 col-md-6">
@@ -380,7 +373,7 @@
 	        						"komposisi": <?php echo $data2['komposisi_k'] ?>,
 	        					} 
 	        </script>
-	        <div class="card tab-pane active" id="rekomendasi_hektar">
+	        <div class="card" id="rekomendasi_hektar">
 	        	<div class="header">
 	                <div class="row clearfix">
 	                    <div class="col-xs-12">
@@ -422,7 +415,7 @@
 				    </table>
 	            </div>
 	        </div>
-	        <div class="card tab-pane active" id="rekomendasi_blok">
+	        <div class="card" id="rekomendasi_blok">
 	        	<div class="header">
 	                <div class="row clearfix">
 	                    <div class="col-xs-12">
@@ -431,28 +424,31 @@
 	                </div>
 	            </div>
         		<div class="body">
-					<div class="col-sm-6">
-						<label for="cbpupuk" class="col-xs-2" style="margin:5px 0 10px">Pupuk</label>
-						<select id="cbpupuk3" class="col-xs-10">
-							<?php
-								$nama_pupuk = "";
-								$sql_area = pg_query($db_conn, "select * from pkt_pupuk where kode_pupuk in (select distinct kode_pupuk from pkt_rekomendasi)");
-								while($data = pg_fetch_assoc($sql_area)){
-									if ($nama_pupuk == "") $nama_pupuk = $data['nama_pupuk'];
-									echo "<option value='".$data['nama_pupuk']."'>".$data['nama_pupuk']."</option>";
-								};
-							?>
-						</select>
-					</div>
-					<div class="col-sm-6">
-						<label for="cbKebutuhan" class="col-xs-6" style="margin:5px 0 10px">Berdasarkan kebutuhan</label>
-						<select id="cbKebutuhan" class="col-xs-6">
-							<option value="">Ideal</option>
-							<option value="N" selected>Nitrogen Daun</option>
-							<option value="P">Fosfor Daun</option>
-							<option value="K">Kalium Daun</option>
-						</select>
-					</div>
+        			<div class="row-fluid">
+						<div class="col-sm-6" style="margin-bottom: 5px;">
+							<label for="cbpupuk" class="col-xs-2" style="margin:5px 0 10px">Pupuk</label>
+							<select id="cbpupuk3" class="col-xs-10">
+								<?php
+									$nama_pupuk = "";
+									$sql_area = pg_query($db_conn, "select * from pkt_pupuk where kode_pupuk in (select distinct kode_pupuk from pkt_rekomendasi)");
+									while($data = pg_fetch_assoc($sql_area)){
+										if ($nama_pupuk == "") $nama_pupuk = $data['nama_pupuk'];
+										echo "<option value='".$data['nama_pupuk']."'>".$data['nama_pupuk']."</option>";
+									};
+								?>
+							</select>
+						</div>
+						<div class="col-sm-6" style="margin-bottom: 5px;">
+							<label for="cbKebutuhan" class="col-xs-6" style="margin:5px 0 10px">Berdasarkan kebutuhan</label>
+							<select id="cbKebutuhan" class="col-xs-6">
+								<option value="">Ideal</option>
+								<option value="N" selected>Nitrogen Daun</option>
+								<option value="P">Fosfor Daun</option>
+								<option value="K">Kalium Daun</option>
+							</select>
+						</div>
+        			</div>
+
         			<div id="mapid4" style="width: 100%; height: 450px;display:none"></div>
         			<div id="template_legend_rekomendasi_blok" style="display:none">
 						<li class="list-group-item" style="padding: 5px 15px; border: none;">
@@ -460,7 +456,6 @@
         			</div>
 					<!--ul class="list-group" id="legend_rekomendasi" style="border: 1px solid #ddd;margin-bottom:0;">
 					</ul-->	
-					<p>&nbsp;</p>						
 					<table id="tabel_rekomendasi_blok" class="table table-striped table-bordered" cellspacing="0" width="100%">
 						<thead>
 				            <tr>
@@ -476,7 +471,7 @@
 				    </table>
 	            </div>
 	        </div>
-	        <div class="card tab-pane active" id="peta_nutrisi">
+	        <div class="card" id="peta_nutrisi">
 	    		<div class="header">
 	                <div class="row clearfix">
 	                    <div class="col-xs-12">
@@ -486,14 +481,28 @@
 	            </div>
 				<div class="body">
 					<div class="row clearfix">
+						<div class="row-fluid">
+							<div class="col-sm-6">
+								<label for="cbunsur" class="col-xs-2" style="margin:5px 0 10px">Unsur</label>
+								<select id="cbunsur">
+									<option value="N" selected>Nitrogen Daun</option>
+									<option value="P">Fosfor Daun</option>
+									<option value="K">Kalium Daun</option>
+									<!-- <option value="Mg">Magnesium Daun</option> -->
+								</select>
+							</div>
+							<div class="col-sm-6">
+								<div class="dt-buttons">
+									<button class="dt-button buttons-html5 btn btn-danger btn-download-map" tabindex="0" type="button" data-type="png">
+										<span>PNG</span>
+									</button>
+									<button class="dt-button buttons-html5 btn btn-primary btn-download-map" tabindex="0" type="button" data-type="tif">
+										<span>TIFF</span>
+									</button>
+								</div>
+							</div>
+						</div>
 						<div class="col-lg-12" style="margin-bottom:0">
-							<label for="cbunsur" class="col-xs-2" style="margin:5px 0 10px">Unsur</label>
-							<select id="cbunsur">
-								<option value="N" selected>Nitrogen Daun</option>
-								<option value="P">Fosfor Daun</option>
-								<option value="K">Kalium Daun</option>
-								<option value="Mg">Magnesium Daun</option>
-							</select>
 							<div id="mapid1" style="width: 100%; height: 450px;"></div>
 							<ul class="list-group" id="legend_N" style="border: 1px solid #ddd;margin-bottom:0;">
 								<li class="list-group-item" style="padding: 5px 15px; border: none;">
@@ -597,7 +606,7 @@
 					</div>
 	            </div>
 	        </div>
-	        <div class="card tab-pane active" id="peta_dosis">
+	        <div class="card" id="peta_dosis">
 	    		<div class="header">
 	                <div class="row clearfix">
 	                    <div class="col-xs-12">
@@ -757,6 +766,15 @@
             }
 		}
 
+		function GetFileExportName() { return 'Rekomendasi Pupuk per Blok Area <?php echo $nama_area; ?>' }
+		function GetFileExportTitle() {
+			var title = "Rekomendasi Pupuk " + $("#cbpupuk3").val();
+			title += " per Blok Area berdasarkan kebutuhan ";
+			title += $("#cbKebutuhan option:selected").html();
+
+			return title;
+		}
+
 		var mapTableBlok = $("#tabel_rekomendasi_blok").DataTable({
 			"columns" : [
 	            { "data" : "id" },
@@ -787,7 +805,23 @@
 		           $(td).addClass("dosis_pohon_blok" + rowData.id); 
 		        }
 			}],
-			"ordering": true
+			"ordering": true,
+			dom: '<"row-fluid"<"col-sm-6"l><"col-sm-6"B>>t<"row"<"col-sm-6"i><"col-sm-6"p>>',
+	        buttons: [ 
+	        	{ 
+	        		extend: 'excel', 
+	        		className: 'btn btn-success',
+	        		filename: GetFileExportName,
+	        		title: GetFileExportTitle
+	        	}, 
+	        	{ 
+	        		extend: 'pdf', 
+	        		className: 'btn btn-danger',
+	        		filename: GetFileExportName,
+	        		title: GetFileExportTitle 
+	        	}, 
+	        	{ extend: 'print', className: 'btn btn-primary' }, 
+	        ]
 		});
 
 	    var arrc = ["#fff7fb","#ece7f2","#d0d1e6","#a6bddb","#74a9cf","#3690c0","#0570b0","#045a8d","#023858"];
@@ -932,7 +966,7 @@
 
 	   		var data_json = imageUrl + "Data_Blok_Pupuk_" + encodeURI(pupuk) + ".geojson";
 	   		var data_img = imageUrl + "Citra_Klasifikasi_Pupuk_"  + encodeURI(pupuk) + ".png";
-	   		console.log(data_json, data_img);
+	   		//console.log(data_json, data_img);
 
 	   		$.getJSON(data_raster).done(function (d) {
 
@@ -966,7 +1000,6 @@
 						table_data.push(val.properties);
 			        });
 
-			        // console.log(table_data);
 			        mapTableBlok.rows.add(table_data).draw();
 			    });
 	   		});			
@@ -1001,5 +1034,35 @@
 		// 	//alert("test");
 		// 	map1.fitBounds(imageBounds);
 		// });
+
+		$( document ).ready(function() {
+			$("#cbpupuk3").trigger("change");
+		}); 
+
+		$(".btn-download-map").on("click",function() {
+	   		var unsur = $("#cbunsur").val();
+	   		var type = $(this).data("type");
+	   		var filename = (type=="png") ? "Citra_Klasifikasi_" : "Citra_Unsur_";
+	   		var suffix = (type=="png") ? "_copy" : ""
+	   		var filetype = "image/" + ( (type=="png") ? "png" : "tiff" )
+			var url = imageUrl + filename + unsur + suffix + "." + type;
+
+			const a = document.createElement("a");
+			a.style.display = "none";
+			document.body.appendChild(a);
+
+			a.href = url;
+
+			// Use download attribute to set set desired file name
+			a.setAttribute("download", filename + unsur + suffix + "." + type);
+
+			// Trigger the download by simulating click
+			a.click();
+
+			// Cleanup
+			//window.URL.revokeObjectURL(a.href);
+			document.body.removeChild(a);
+
+		});
 	</script>
 </section>
