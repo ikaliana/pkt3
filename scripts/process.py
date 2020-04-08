@@ -20,6 +20,7 @@ import rasterize
 import helper
 import dbhelper as db
 import savetofile as save
+import resizeimage as resize
 
 # ==============================================================================================================================
 
@@ -379,11 +380,19 @@ for unsur in kelompok_unsur:
 	# print(raster_unsur[unsur])
 
 	# --- SAVE TO FILE --- #
+	# SAVE TO TIFF (FOR DATA)
 	nama_raster = work_folder + "Citra_Unsur_" + unsur + ".tif"
 	save.SaveDataToTiff(nama_raster,raster_unsur[unsur],g)
 
+	# SAVE TO PNG --> TO BE DISPLAYED IN MAP
 	nama_raster = work_folder + "Citra_Klasifikasi_" + unsur + ".png"
 	save.SaveDataToPNG(nama_raster,raster_unsur_color[unsur].tostring(),cols,rows)
+
+	# SAVE TO BIGGER SIZE PND --> TO BE DOWNLOADED (ALL EXCEPT MG)
+	if unsur != 'Mg':
+		nama_raster_target = work_folder + "Citra_Klasifikasi_" + unsur + "_copy.png"
+		nama_raster_legend = "../images" + "/Legend_Unsur_" + unsur + ".png"
+		resize.GenerateDownloadableImage(unsur,nama_raster,nama_raster_target,nama_raster_legend)
 
 	for nama_pupuk in komposisi_pupuk:
 		nama_raster = work_folder + "Citra_Pupuk_" + nama_pupuk + "_" + unsur + ".tif"
