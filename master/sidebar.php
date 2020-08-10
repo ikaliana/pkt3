@@ -1,5 +1,8 @@
 <?php
-    $page = $_GET['p'];
+    $page = '';
+    if (isset($_GET['p'])) {
+        $page = $_GET['p'];
+    }
     
     $area_group = ($page=="area_content" OR $page=="area_edit");
     $citra_group = ($page=="citra_content");
@@ -61,7 +64,7 @@
                             <li class="<?php if($citra_group){echo 'active';}?>">
                                 <a href="index.php?p=citra_content">Citra Sentinel</a>
                             </li>
-							<li class="<?php if($model_group){echo 'active';}?>">
+							<li class="<?php if($model_group){echo 'active';}?>" style="display: none;">
                                 <a href="index.php?p=model_content">Model Perhitungan Nutrisi</a>
                             </li>
                             <li class="<?php if($pupuk_group){echo 'active';}?>">
