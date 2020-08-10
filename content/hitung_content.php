@@ -250,9 +250,10 @@
 				function () {
 					var request = new XMLHttpRequest();
 					request.responseType = 'text';
+					
 					request.onload = function () {
-					    if (request.readyState === request.DONE) {
-					        if (request.status === 200) {
+					    if (request.readyState == 4) {
+					        if (request.status == 200) {
 					            var res = JSON.parse(request.response);
 					            if(res.type == "success") location.href = './index.php?p=hasil_content_detail&kd=' + res.ID;
 					            else swal(res.title, res.text, res.type);
@@ -269,7 +270,7 @@
 					    }
 					};
 
-					request.open("POST", './ajax/analisis_add_action.php');
+					request.open("POST", './ajax/analisis_add_action.php', true);
 					request.send(form_data);
 				});
 
