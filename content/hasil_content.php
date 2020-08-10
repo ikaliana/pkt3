@@ -73,6 +73,7 @@
 											$query .= "from pkt_analisis a ";
 											$query .= "left join pkt_citra c on a.kode_citra = c.kode_citra ";
 											$query .= "left join pkt_area ar on c.kode_area = ar.kode_area";
+											$query .= "order by ar.nama asc, c.tanggal asc";
 
 											$sql_area = pg_query($db_conn, $query);
 											while($data = pg_fetch_assoc($sql_area)){
