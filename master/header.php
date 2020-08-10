@@ -83,7 +83,10 @@ include './user_access.php';
     </style>
 
 <?php
-    $page = $_GET['p'];
+    $page = '';
+    if (isset($_GET['p'])) {
+        $page = $_GET['p'];
+    }
     if ($page=="hasil_content_detail") {
 ?>	
     <style type="text/css">
