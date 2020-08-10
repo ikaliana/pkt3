@@ -48,6 +48,7 @@ if (isset($_FILES['shp']) && !empty($_FILES['shp'])) {
 					<?php
 				} else {	
 					move_uploaded_file($_FILES["shp"]["tmp_name"][$i], '../uploads/area/' .$kode_area . '/' . $_FILES["shp"]["name"][$i]);
+					chmod('../uploads/area/'.$kode_area[0]. '/' . $_FILES["shp"]["name"][$i],0777);
 					?>
 					<script type="text/javascript">
 						setTimeout(function () { swal("Yes!","Area berhasil diperbarui!","success");
