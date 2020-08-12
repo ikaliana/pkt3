@@ -66,14 +66,14 @@
 									<div class="media">
 										<div class="media-left">
 											<a href="#">
-												<img class="media-object" style="padding:5px;" src="images/icon/model.png" alt="model perhitungan" width="70">
+												<img class="media-object" style="padding:5px;" src="images/icon/fertilizer_2.png" alt="riwayat pemupukan" width="70">
 											</a>
 										</div>
 										
 									</div>
 								</div>
 								<div class="content">
-									<span>Model</span><br/>
+									<span>Riwayat Pemupukan</span><br/>
 									<a href="index.php?p=model_content"><button type="button" class="btn bg-blue-grey waves-effect">
 										<span>KELOLA</span>
 									</button></a>
@@ -93,7 +93,7 @@
 									</div>
 								</div>
 								<div class="content">
-									<span>Pupuk</span><br/>
+									<span>Pupuk Anorganik</span><br/>
 									<a href="index.php?p=pupuk_content"><button type="button" class="btn bg-blue-grey waves-effect">
 										<span>KELOLA</span>
 									</button></a>
